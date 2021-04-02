@@ -5,9 +5,9 @@ import org.springframework.data.annotation.Id;
 
 public class User {
 	  @Id
-	  public String userName;
+	  private String userName;
 
-	  public String name, password, address;
+	  private String name, password, address, token;
 
 	  public User() {}
 
@@ -17,6 +17,42 @@ public class User {
 		this.name = name;
 		this.password = password;
 		this.address = address;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+
+	public String getUserName() {
+		return userName;
 	}
 
 	@Override
