@@ -2,24 +2,28 @@ package com.sherry.meelo.users.model;
 
 import org.springframework.data.annotation.Id;
 
+
 public class User {
 	  @Id
-	  public String id;
+	  public String userName;
 
-	  public String firstName;
-	  public String lastName;
+	  public String name, password, address;
 
 	  public User() {}
 
-	  public User(String firstName, String lastName) {
-	    this.firstName = firstName;
-	    this.lastName = lastName;
-	  }
+	public User(String userName,String password, String name,  String address) {
+		super();
+		this.userName = userName;
+		this.name = name;
+		this.password = password;
+		this.address = address;
+	}
 
-	  @Override
-	  public String toString() {
-	    return String.format(
-	        "Customer[id=%s, firstName='%s', lastName='%s']",
-	        id, firstName, lastName);
-	  }
+	@Override
+	public String toString() {
+		return "User [userName=" + userName + ", name=" + name + ", password=" + password + ", address=" + address
+				+ "]";
+	}
+	
+	
 }
