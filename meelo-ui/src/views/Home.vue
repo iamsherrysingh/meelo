@@ -15,12 +15,15 @@
       </div>
     </div>
   </section>
+  <EventsList/>
 </div>
 </template>
 <script>
+import EventsList from '../components/EventsList'
 export default {
   name: 'home',
   components: {
+    EventsList
   }
 }
 </script>
